@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/notes/style.css" />
+    <title>MongoDB overview</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MongoDB Overview</h1>
+      <p>
+        As indicated by the "M" in MERN, MongoDb will serve as our backend
+        database for our app.
+      </p>
+      <p>
+        MongoDB is noSQL, meaning it doesn't use structured query language (I do
+        need to learn SQL and mySQL/ PostgreSQL later as I know many employers
+        are looking for that as a skill)
+      </p>
+      <p>
+        The architecture of a NoSQL database like MongoDB is such that it stores
+        data in the form of collections and documents
+      </p>
+      <p>
+        A collection represents a single entity in our app, for example in a
+        e-commerce store app, we'd have entities for categories, products, and
+        users in the e-commerce store, And each of these woukd be a 'collection'
+        in our database
+      </p>
+      <p>
+        Inside of our collections we store DOCUMENTS, these documents are an
+        instance of the entry containing various values is key value pairs,
+        like:
+      </p>
+      <p>price: 26.77</p>
+      <p>title: "Learning MERN"</p>
+      <p>author: "Luke Sorrenti"</p>
+    </div>
+    <div class="container">
+      <p>
+        Documents look very similar to JSON objects, though they are technically
+        Binary JSON or BSON
+      </p>
+    </div>
+    <div class="container">
+        <h2>
+            It would look something like this:
+        </h2>
+        <p>
+            Database
+        </p>
+        <p>
+            -> Products collection
+        </p>
+        <p>
+            -> Product document
+        </p>
+         <p>
+         {
+         </p>
+         <p>
+            price: 26.77
+         </p>
+         <p>
+            title: "Learning node"
+         </p>
+         <p>
+            description: "Learn node.js development"
+         </p>
+         <p>
+            expiry-date: 10-21-2023
+         </p>
+         <p>
+         }
+         </p>
+         <p>
+            -> Product document
+         </p>
+         <p>
+            ....
+         </p>
+         <p>
+         -> Product document
+         </p>
+         <p>
+            ....
+         </p>
+         <p>
+            -> Users collection
+         </p>
+         <p>
+          -> User document
+         </p>
+         <p>
+            {
+         </p>
+         <p>
+            username: "123username",
+         </p>
+         <p>
+            contact:
+         </p>
+         <p>
+            {
+         </p>
+         <p>
+            phone: "555-123-4567",
+         </p>
+         <p>
+            email: "example@gmail.com"
+         </p>
+         <p>
+         }
+         </p>
+         <p>
+         }
+         </p>
+         <p>
+            -> User document
+         </p>
+         <p>
+            ... and so on
+         </p>
+         </div>
+         <div class="container">
+            <p>
+                As you can see above we have a 
+                variety of relationships, each user 
+                has a unique username and contact info, within 
+                contact you have phone and email, the BSON format 
+                provides support for many data-types like 
+                strings, integers etc..
+            </p>
+         </div>
+
+
+
+
+    </div>
+  </body>
+</html>
