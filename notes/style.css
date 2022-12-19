@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 70px;
   font-family: Corinthia-Bold, sans-serif;
 }
 .container {
@@ -30,6 +30,13 @@ h1 {
   margin: auto;
   max-width: 600px;
   margin-top: 30px;
+  flex-direction: column;
+}
+.container h2 {
+  font-size: 33px;
+}
+.container p {
+  font-size: 30px;
 }
 @media only screen and (min-width: 600px) {
   .container {
