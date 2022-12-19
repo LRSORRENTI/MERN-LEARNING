@@ -1,0 +1,38 @@
+@font-face {
+  font-family: Corinthia-Bold;
+  src: url(/notes/fonts/Corinthia-Bold.ttf);
+}
+@font-face {
+  font-family: Raleway;
+  src: url(/notes/fonts/Raleway-Bold.ttf);
+}
+* {
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  background-color: rgba(52, 99, 132, 0.599);
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Corinthia-Bold, sans-serif;
+}
+.container {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  margin: auto;
+  max-width: 600px;
+  margin-top: 30px;
+}
+@media only screen and (min-width: 600px) {
+  .container {
+    max-width: 700px;
+  }
+}
