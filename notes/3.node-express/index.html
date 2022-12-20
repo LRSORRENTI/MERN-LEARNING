@@ -18,7 +18,61 @@
       </p>
       <p>
         Let's start to setup our file structure and create a folder called
-        movie-reviews
+        movie-reviews, and inside movie-reviews create another folder called
+        'backend'
+      </p>
+      <p>
+        After running npm init inside of backend, npm creates a package.json for
+        us, which contains meta-data about our Node.js project
+      </p>
+      <p>
+        Next inside our backend folder, run the following in order to install
+        the dependencies we need
+      </p>
+      <p>npm install express cors mongodb dotenv</p>
+      <p>
+        After running, you'll notice in our package.json a new property
+        'dependencies' has been created
+      </p>
+    </div>
+    <div class="container">
+      <h2>Express</h2>
+      <p>
+        Express is a framewok that acts as a layer atop Node.js web server
+        making it much easier to develop web applications, it simplifies the
+        API's of Node.js and adds helpful features, and assists us in organizing
+        our apps web functionality with middleware, routing and many others
+      </p>
+      <h2>CORS</h2>
+      <p>
+        CORS or Cross-Origin Resource Sharing, by default modern browswers won't
+        allow frontend clients to talk to REST API's
+      </p>
+      <p>
+        The broswer will by default block the requests sent from client to
+        server as a security mechanism, to make sure that the client-side
+        browser JS code can ONLY talk to their own allowed server, not other
+        servers that could potentially run mailcious code
+      </p>
+      <p>
+        To circumvent this security mechanism, we can enable CORS checking,
+        which will use additional HTTP headers to tell browsers to give a web
+        app running at one origin, access to a specified resources at another
+      </p>
+      <p>
+        The CORS package we installed earlier provides an Express.js middleware
+        than can enable CORS with different options so we can make the correct
+        connections on the network
+      </p>
+      <p>
+        The mongodb package we installed allows us to interact with our MongoDB
+        database
+      </p>
+      <p>
+        And finally the dotenv loads environment variables from tue process.env
+        file instead of setting environment variables on our development
+        machine, which simplifies development work, we'll go into process.env in
+        greater detail later
       </p>
     </div>
   </body>
