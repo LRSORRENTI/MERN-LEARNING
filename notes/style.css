@@ -18,6 +18,9 @@ h1 {
   font-size: 70px;
   font-family: Corinthia-Bold, sans-serif;
 }
+h2 {
+  text-decoration: underline;
+}
 .container {
   /* border: 1px solid blue; */
   display: flex;
@@ -33,7 +36,7 @@ h1 {
   flex-direction: column;
 }
 .container h2 {
-  font-size: 33px;
+  font-size: 40px;
 }
 .container p {
   font-size: 30px;

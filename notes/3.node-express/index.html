@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/notes/style.css" />
+    <title>Setting up Node.js & Express.js backend</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Setting up Node.js & Express.js backend</h1>
+    </div>
+    <div class="container">
+      <p>
+        Next we need to set up our backend, we'll be using Node.js and
+        Express.js
+      </p>
+      <p>
+        Let's start to setup our file structure and create a folder called
+        movie-reviews, and inside movie-reviews create another folder called
+        'backend'
+      </p>
+      <p>
+        After running npm init inside of backend, npm creates a package.json for
+        us, which contains meta-data about our Node.js project
+      </p>
+      <p>
+        Next inside our backend folder, run the following in order to install
+        the dependencies we need
+      </p>
+      <p>npm install express cors mongodb dotenv</p>
+      <p>
+        After running, you'll notice in our package.json a new property
+        'dependencies' has been created
+      </p>
+    </div>
+    <div class="container">
+      <h2>Express</h2>
+      <p>
+        Express is a framewok that acts as a layer atop Node.js web server
+        making it much easier to develop web applications, it simplifies the
+        API's of Node.js and adds helpful features, and assists us in organizing
+        our apps web functionality with middleware, routing and many others
+      </p>
+      <h2>CORS</h2>
+      <p>
+        CORS or Cross-Origin Resource Sharing, by default modern browswers won't
+        allow frontend clients to talk to REST API's
+      </p>
+      <p>
+        The broswer will by default block the requests sent from client to
+        server as a security mechanism, to make sure that the client-side
+        browser JS code can ONLY talk to their own allowed server, not other
+        servers that could potentially run mailcious code
+      </p>
+      <p>
+        To circumvent this security mechanism, we can enable CORS checking,
+        which will use additional HTTP headers to tell browsers to give a web
+        app running at one origin, access to a specified resources at another
+      </p>
+      <p>
+        The CORS package we installed earlier provides an Express.js middleware
+        than can enable CORS with different options so we can make the correct
+        connections on the network
+      </p>
+      <p>
+        The mongodb package we installed allows us to interact with our MongoDB
+        database
+      </p>
+      <p>
+        And finally the dotenv loads environment variables from tue process.env
+        file instead of setting environment variables on our development
+        machine, which simplifies development work, we'll go into process.env in
+        greater detail later
+      </p>
+    </div>
+    <div class="container">
+      <h2>What are dependencies anyway?</h2>
+      <p>
+        Well dependencies contain the dependency packages, and their specific
+        version number like:
+      </p>
+      <p>"cors": "^2.8.5",</p>
+      <p>
+        Every single time we use 'npm install yadayada' npm will save and keep
+        track of all the yadayadas and their version everytime
+      </p>
+      <p>
+        How it works is that npm, when we use npm install, it will fetch the
+        latest versions of what we want and auto-saves it in that folder called
+        'node_modules'
+      </p>
+      <p>
+        And the package-lock.json tracks all the versions of the dependencies
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        Next we're going to install a package called 'nodemon', nodemon will
+        auto-detect code changes and restart our node server so that we wouldn't
+        need to stop and restart it every time we make a change
+      </p>
+      <p>Enter: npm install -g nodemon</p>
+      <p>nodemon will now be available globally on our system</p>
+      <p>And we can check the globally available npm list with:</p>
+      <p>npm list -g</p>
+      <p>create-react-app@5.0.1</p>
+      <p>nodemon@2.0.20</p>
+      <p>npm@8.19.2</p>
+      <p>sass@1.57.0</p>
+      <p>typescript@4.8.4</p>
+    </div>
+  </body>
+</html>
