@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/notes/style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>CREATING OUR BACKEND SERVER</title>
   </head>
   <body>
@@ -22,6 +22,73 @@
       <p>"main": "index.js",</p>
       <p>"type": "module",</p>
       <p>This is important so we can use import statements in ES6</p>
+    </div>
+    <div class="container">
+      <p>
+        Now let's create a js file inside our backend folder, then inside create
+        server.js file
+      </p>
+      <p>Inside the server.js file add the following JS:</p>
+      <p>import express from 'express'</p>
+      <p>import cors from 'cors'</p>
+      <p>The above imports the express and cors middleware</p>
+      <p>
+        Middleware is software and cloud services that provide common services
+        and capabilities to applications and help developers and operators build
+        and deploy applications more efficiently. Middleware acts like the
+        connective tissue between applications, data, and users.
+      </p>
+      <p>import movies from './api/movies.route.js'</p>
+      <p>
+        We also import movie.route.js, which will be a serparate file we'll
+        create later to store our routes
+      </p>
+      <p>const app = express()</p>
+      <p>Then we create the server the the above code</p>
+      <p>app.use(cors())</p>
+      <p>app.use(express.json())</p>
+      <p>
+        The above code then attaches cors and express.json middleware we
+        imported
+      </p>
+      <p>
+        It's important to note that the middleware we're using are functions
+        that Express executes in the middle after the incoming request, and
+        before the output
+      </p>
+      <p>
+        Middlewares often make changes to the request and response objects,
+        they'll use function registers with our Express app
+      </p>
+      <p>
+        With the app.use(express.json()), middleware allows us to retrieve data
+        from a request via the body attribute, without this, data retrieval is
+        more difficult
+      </p>
+      <p>app.use("/api/v1/movies", movies)</p>
+      <p>
+        app.use('*', (req, res) => { res.status(404).json({error: "not found"})
+        })
+      </p>
+      <p>
+        The above specify the inital routes, the general convention for API urls
+        is for it to begin with '/api' then the version number
+      </p>
+      <p>
+        Since the API we use is about movies, the main URL for our app will be
+      </p>
+      <p>localhost:5000/api/v1/movies</p>
+      <p>The subsquent routes are specified to the second argument 'movies'</p>
+      <p>
+        And if someone tries to go to a route that doesn't exist, the wildcard
+        route we specified with '*' will return a '404 not found' page
+      </p>
+      <p>export default app</p>
+      <p>
+        Finally the above exports our app as a module so other files can import
+        it, this allows us to separate our main server code from our database
+        code
+      </p>
     </div>
   </body>
 </html>
